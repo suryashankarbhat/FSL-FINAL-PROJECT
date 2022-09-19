@@ -1,5 +1,5 @@
 refer this link to install ros melodic.  https://wiki.ros.org/melodic/Installation/Ubuntu
-refered from https://sir.upc.edu/projects/rostutorials/9-gazebo_sensors_tutorial/index.html#depth-label to create the world with sensors.
+and the  loading the world with camera is refered from https://sir.upc.edu/projects/rostutorials/9-gazebo_sensors_tutorial/index.html#depth-label.
 
 
 
