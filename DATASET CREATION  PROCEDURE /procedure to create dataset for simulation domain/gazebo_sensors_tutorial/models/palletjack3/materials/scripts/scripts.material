@@ -1,0 +1,15 @@
+material testing/material
+material Logo/R2S
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                shelf.jpg
+               
+            }
+        }
+    }
+}
