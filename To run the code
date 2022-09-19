@@ -1,0 +1,6 @@
+# installing required library
+pip install opencv-python
+pip install tqdm
+pip install scipy
+pip install pydot
+pip install matplotlib
