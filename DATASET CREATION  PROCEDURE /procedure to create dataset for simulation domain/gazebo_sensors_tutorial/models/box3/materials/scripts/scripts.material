@@ -1,0 +1,29 @@
+material Cargo/Diffuse
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        WOODEN FRUIT CRATE3.JPG
+      }
+    }
+  }
+}
+
+material Marker/Diffuse
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+       WOODEN FRUIT CRATE4.JPG
+      }
+    }
+  }
+}
