@@ -1,4 +1,4 @@
-refer this link to install ros melodichttps://wiki.ros.org/melodic/Installation/Ubuntu
+refer this link to install ros melodic.  https://wiki.ros.org/melodic/Installation/Ubuntu
 
 to add all the models to the path
 export GAZEBO_MODEL_PATH=~/catkin_ws/src/gazebo_sensors_tutorial/models/:${GAZEBO_MODEL_PATH}
