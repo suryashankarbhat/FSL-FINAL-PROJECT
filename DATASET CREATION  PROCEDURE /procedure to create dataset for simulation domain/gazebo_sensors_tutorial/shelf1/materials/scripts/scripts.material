@@ -1,0 +1,29 @@
+material Cargo/Diffuse
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+       rack.JPG
+      }
+    }
+  }
+}
+
+material Marker/Diffuse
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+       rack2.JPG
+      }
+    }
+  }
+}
