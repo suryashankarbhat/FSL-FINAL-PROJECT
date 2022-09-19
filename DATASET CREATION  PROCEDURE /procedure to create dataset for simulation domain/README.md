@@ -1,16 +1,46 @@
-Creating dataset from simulation domain
+refer this link to install ros melodichttps://wiki.ros.org/melodic/Installation/Ubuntu
 
-  STEP 1:
-1.  Change the model location in world file according to the requirement    
-    
-    
-      e
-    
+to add all the models to the path
+export GAZEBO_MODEL_PATH=~/catkin_ws/src/gazebo_sensors_tutorial/models/:${GAZEBO_MODEL_PATH}
 
 
-2. Install below packages required for the project
+#to source all the files
+source ~/.bashrc
+#sourcing ros melodic
+source /opt/ros/melodic/setup.bash
+#creating catkin workspace
+
+#creating to workspace
+ cd catkin_ws
+$ mkdir -p ~/catkin_ws/src
+$ cd ~/catkin_ws/
+$ catkin_make
  
 
-    pip install Ros-melodic-full-desktop 
+#move the gazebo_sensor tutorial to the src file of the catkin workspace
+#sourcing the workspace
+ source devel/setup.bash
+
+#launching the world with camera(bright light conditions)
+roslaunch gazebo_sensors_tutorial kinect_diffuse.launch 
+#normal light
+roslaunch gazebo_sensors_tutorial kinect_normal.launch 
+#low light
+roslaunch gazebo_sensors_tutorial kinect_emmissive.launch 
+
+#in other terminal 
+ roslaunch gazebo_sensors_tutorial kinect_coke_rviz.launch
+
+#to download the images from the rgbd camera
+rosrun rqt_image_view rqt_image_view 
+    
+    
+
+    
+
+
+ 
+
+
             
  
