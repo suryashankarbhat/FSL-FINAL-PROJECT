@@ -1,0 +1,19 @@
+material testing/material
+{
+  receive_shadows on
+
+  technique
+  {
+    pass
+    {
+      
+      diffuse 0 0 0.5 1
+      
+
+      texture_unit
+      {
+        rack2.jpg
+      }
+    }
+  }
+}
