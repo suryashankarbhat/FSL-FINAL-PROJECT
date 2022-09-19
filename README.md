@@ -20,12 +20,12 @@ https://universityoflincoln-my.sharepoint.com/:f:/r/personal/25403914_students_l
 
 # To run maml code
 
-#training customdataset change N_way K_shot for training at different parameters(this below command is for 5 way 5 shot training)
+# training customdataset change N_way K_shot for training at different parameters(this below command is for 5 way 5 shot training)
 python main.py --dataset=customdataset --mode=train --n_way=5 --k_shot=5 --k_query=15
-#validation customdataset(for testing for 5 way 5 shot learning)
+# validation customdataset(for testing for 5 way 5 shot learning)
 python main.py --dataset=customdataset --mode=test --n_way=5 --k_shot=5 --k_query=15
 
-#history visualisation for train(to get all the metric graphs)
+# history visualisation for train(to get all the metric graphs)
 python history_vis.py --mode=train --n_way=5 --k_shot=15
-#history visualisation for test
+# history visualisation for test
 python history_vis.py --mode=test --n_way=5 --k_shot=15
