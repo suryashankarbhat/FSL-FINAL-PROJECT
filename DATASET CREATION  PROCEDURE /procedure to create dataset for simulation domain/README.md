@@ -35,17 +35,20 @@ $ catkin_make
 
 roslaunch gazebo_sensors_tutorial kinect_diffuse.launch 
 
-#normal light
+#normal light:
 
 roslaunch gazebo_sensors_tutorial kinect_normal.launch 
 
-#low light
+#low light:
+
 roslaunch gazebo_sensors_tutorial kinect_emmissive.launch 
 
-#in other terminal 
+#in other terminal:
+
  roslaunch gazebo_sensors_tutorial kinect_coke_rviz.launch
 
-#to download the images from the rgbd camera
+#to download the images from the rgbd camera:
+
 rosrun rqt_image_view rqt_image_view 
     
     
