@@ -1,5 +1,8 @@
 refer this link to install ros melodic.  https://wiki.ros.org/melodic/Installation/Ubuntu
-refered from https://sir.upc.edu/projects/rostutorials/9-gazebo_sensors_tutorial/index.html#depth-label to create the world with sensors
+refered from https://sir.upc.edu/projects/rostutorials/9-gazebo_sensors_tutorial/index.html#depth-label to create the world with sensors.
+
+
+
 to add all the models to the path
 export GAZEBO_MODEL_PATH=~/catkin_ws/src/gazebo_sensors_tutorial/models/:${GAZEBO_MODEL_PATH}
 
