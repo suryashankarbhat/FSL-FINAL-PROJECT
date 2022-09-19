@@ -18,7 +18,7 @@ https://universityoflincoln-my.sharepoint.com/:f:/r/personal/25403914_students_l
 
 
 
-TO RUN MAML CODE
+# To run maml code
 
 # training customdataset change N_way K_shot for training at different parameters(this below command is for 5 way 5 shot training)
 python main.py --dataset=customdataset --mode=train --n_way=5 --k_shot=5 --k_query=15
