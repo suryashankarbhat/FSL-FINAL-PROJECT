@@ -56,13 +56,13 @@ def smooth(data):
 
 def plot_figure(loss, smooth_loss, acc, smooth_acc):
     fig = plt.figure(dpi=128, figsize=(10,6))
-    plt.plot(loss, color='coral', alpha=0.2, label='训练误差')
-    plt.plot(smooth_loss,color='coral', label='平滑后的训练误差')
-    plt.plot(acc, color='royalblue', alpha=0.2, label='训练精度')
-    plt.plot(smooth_acc, color='royalblue', label='平滑后的训练精度')
+    plt.plot(loss, color='coral', alpha=0.2, label='Training error')
+    plt.plot(smooth_loss,color='coral', label='Training error after smoothing')
+    plt.plot(acc, color='royalblue', alpha=0.2, label='Training accuracy')
+    plt.plot(smooth_acc, color='royalblue', label='Training accuracy after smoothing')
     plt.legend(loc='upper right')
-    plt.title('{}数据集 {}-way {}-shot 小样本图像分类任务{}过程曲线'.format(dataset, n_way, k_shot, '训练'))
-    plt.xlabel('元批次数', fontsize=16)
+    plt.title('{}data set{}-way {}-shot Small sample image classification task {} process curve'.format(dataset, n_way, k_shot, 'training'))
+    plt.xlabel('Number of meta-batches', fontsize=16)
     plt.ylabel('', fontsize=16)
     # plt.tick_params(axis='both', which='major', labelsize=16)
     plt.show()
@@ -70,7 +70,7 @@ def plot_figure(loss, smooth_loss, acc, smooth_acc):
 if __name__ == '__main__':
     argparse = argparse.ArgumentParser()
     # Dataset options
-    argparse.add_argument('--dataset', type=str, help='Dataset customdataset or omniglot', default='customdataset')
+    argparse.add_argument('--dataset', type=str, help='Dataset customdataset ', default='customdataset')
     # Task options
     argparse.add_argument('--mode', type=str, help='Train process or test process', default='train')
     argparse.add_argument('--n_way', type=int, help='N-way', default=5)
@@ -84,23 +84,23 @@ if __name__ == '__main__':
     k_shot = args.k_shot
     os.chdir(args.his_dir)
     if args.mode == 'train':
-        loss = read_file('{}-{}-way-{}-shot-train.txt'.format(dataset, n_way, k_shot))
-        acc = read_file('{}-{}-way-{}-shot-acc.txt'.format(dataset, n_way, k_shot))
-        # calculate means and std of last 1000 iteration
-        acc_mean = np.mean(acc[-1000:])
-        acc_std = np.std(acc[-1000:])
+        loss = read_file('{}-{}-way{}-shot-train.txt'.format(dataset, n_way, k_shot))
+        acc = read_file('{}-{}-way{}-shot-acc.txt'.format(dataset, n_way, k_shot))
+        # calculate means and std of last 200 iteration
+        acc_mean = np.mean(acc[-200:])
+        acc_std = np.std(acc[-200:])
         print (acc_mean, acc_std)
 
     elif args.mode == 'test':
-        loss = read_file('{}-{}-way-{}-shot-loss-test.txt'.format(dataset, n_way, k_shot))
-        acc = read_file('{}-{}-way-{}-shot-acc-test.txt'.format(dataset, n_way, k_shot))
+        loss = read_file('{}-{}-way{}-shot-loss-test.txt'.format(dataset, n_way, k_shot))
+        acc = read_file('{}-{}-way{}-shot-acc-test.txt'.format(dataset, n_way, k_shot))
         # pre process
         loss = data_preprocess(loss)
         acc = data_preprocess(acc)
-        # calculate means and std of last 200 iteration
-        # calculate means and std of last 1000 iteration
-        acc_mean = np.mean(acc[-200:])
-        acc_std = np.std(acc[-200:])
+        # calculate means and std of last 20 iteration
+        
+        acc_mean = np.mean(acc[-20:])
+        acc_std = np.std(acc[-20:])
         print (acc_mean, acc_std)
 
     
