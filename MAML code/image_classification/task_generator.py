@@ -46,7 +46,7 @@ import time
             self.img_channel = 3
             self.dim_output = self.n_way
         # For example:
-        # 5-way 1-shot 15-query for MiniImagenet
+        # for my custom dataset.
         if self.dataset == 'customdataset':
             self.img_size = 84
             self.img_channel = 3
