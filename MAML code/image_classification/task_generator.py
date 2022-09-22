@@ -1,7 +1,5 @@
 '''REFERENCE from https://github.com/HilbertXu/MAML-Tensorflow
-    
-   
-'''
+ '''
 
 from __future__ import print_function
 import argparse
@@ -19,8 +17,7 @@ import cv2
 import time
 
 
-        
-class TaskGenerator:
+ class TaskGenerator:
     def __init__(self, args=None):
         '''
         :param mode: train or test
@@ -258,8 +255,4 @@ if __name__ == '__main__':
         print (len(batch_set))
         time.sleep(5)
     
-    '''
-    @TODO
-    change to np.random.choice
-    And find out the reason why so many repeat
-    '''
+  
