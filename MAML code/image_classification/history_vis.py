@@ -1,7 +1,5 @@
-'''
-    Date: 6th Mar 2020
-    Author: HilbertXu
-    Abstract: Code for visualizing the training history and smooth the line
+'''reference from 
+https://github.com/HilbertXu/MAML-Tensorflow
 '''
 import os
 import sys
@@ -10,8 +8,8 @@ import numpy as np
 import scipy.signal as signal
 import matplotlib.pyplot as plt
 
-plt.rcParams['font.sans-serif']=['SimSun'] #用来正常显示中文标签
-plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
+plt.rcParams['font.sans-serif']=['SimSun'] 
+plt.rcParams['axes.unicode_minus']=False 
 
 
 def read_file(file_name):
